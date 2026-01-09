@@ -29,6 +29,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SHRIMP_SOUP.get());
 
                         output.accept(ModBlocks.TUNGSTEEN_CUBE.get());
+                        output.accept(ModBlocks.FISHSTACK_BLOCK.get());
 
                     }).build());
 

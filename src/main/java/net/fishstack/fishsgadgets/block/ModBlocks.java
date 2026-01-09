@@ -24,6 +24,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TUNGSTEEN_CUBE = registerBlock("tungsteen_cube",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> FISHSTACK_BLOCK = registerBlock("fishstack_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WATER)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
