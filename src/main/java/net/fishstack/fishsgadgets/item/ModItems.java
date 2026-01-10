@@ -22,6 +22,9 @@ public class ModItems {
     public static final RegistryObject<Item> BANANENE = ITEMS.register("bananene",
             () -> new Item(new Item.Properties().food(ModFoodProperties.BANANENE)));
 
+    public static final RegistryObject<Item> TEST_ITEM = ITEMS.register("test_item",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.TEST_ITEM)));
+
     public static final RegistryObject<Item> RAW_SHRIMP = ITEMS.register("raw_shrimp",
             () -> new Item(new Item.Properties().food(ModFoodProperties.RAW_SHRIMP)));
     public static final RegistryObject<Item> COOKED_SHRIMP = ITEMS.register("cooked_shrimp",

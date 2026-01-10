@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FISH_INGOT.get());
                         output.accept(ModItems.FISH_PICKAXE.get());
                         output.accept(ModItems.BANANENE.get());
+                        output.accept(ModItems.TEST_ITEM.get());
 
                         output.accept(ModItems.RAW_SHRIMP.get());
                         output.accept(ModItems.COOKED_SHRIMP.get());

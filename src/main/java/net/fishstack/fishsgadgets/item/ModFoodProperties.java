@@ -13,6 +13,8 @@ public class ModFoodProperties {
     public static final FoodProperties COOKED_SHRIMP = new FoodProperties.Builder().nutrition(5).saturationMod(0.7f).build();
     public static final FoodProperties SHRIMP_SUSHI = new FoodProperties.Builder().nutrition(7).saturationMod(0.6f).build();
     public static final FoodProperties SHRIMP_SOUP = stew(7).build();
+    public static final FoodProperties TEST_ITEM = new FoodProperties.Builder().nutrition(7).saturationMod(0.6f)
+            .effect(() -> new MobEffectInstance(MobEffects.POISON, 200), 1.0f).build();
 
     private static FoodProperties.Builder stew(int pNutrition) {
         return (new FoodProperties.Builder()).nutrition(pNutrition).saturationMod(0.6F);
