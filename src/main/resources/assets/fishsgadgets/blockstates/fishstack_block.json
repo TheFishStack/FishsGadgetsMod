@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "fishsgadgets:block/fishstack_block"
+      "model": "fishsgadgets:block/tungsteen_cube"
     }
   }
 }

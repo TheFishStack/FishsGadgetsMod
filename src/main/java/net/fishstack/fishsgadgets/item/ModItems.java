@@ -1,9 +1,12 @@
 package net.fishstack.fishsgadgets.item;
 
 import net.fishstack.fishsgadgets.FishsGadgetsMod;
+import net.fishstack.fishsgadgets.fluids.ModFluids;
 import net.fishstack.fishsgadgets.item.custom.WandItem;
 import net.minecraft.world.item.BowlFoodItem;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,6 +27,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> TEST_ITEM = ITEMS.register("test_item",
             () -> new Item(new Item.Properties().food(ModFoodProperties.TEST_ITEM)));
+
+    public static final RegistryObject<Item> FISHSTACK_BUCKET = ITEMS.register("fishstack_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_FISHSTACK_FLUID, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+
 
     public static final RegistryObject<Item> RAW_SHRIMP = ITEMS.register("raw_shrimp",
             () -> new Item(new Item.Properties().food(ModFoodProperties.RAW_SHRIMP)));

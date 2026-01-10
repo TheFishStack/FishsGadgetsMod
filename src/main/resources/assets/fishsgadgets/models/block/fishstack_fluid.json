@@ -1,0 +1,6 @@
+ {
+  "parent": "block/cube_all",
+  "textures": {
+"all": "fishsgadgets:block/fishstack_fluid"
+}
+}

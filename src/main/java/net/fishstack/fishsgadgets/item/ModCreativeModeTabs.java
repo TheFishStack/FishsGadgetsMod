@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FISH_PICKAXE.get());
                         output.accept(ModItems.BANANENE.get());
                         output.accept(ModItems.TEST_ITEM.get());
+                        output.accept(ModItems.FISHSTACK_BUCKET.get());
 
                         output.accept(ModItems.RAW_SHRIMP.get());
                         output.accept(ModItems.COOKED_SHRIMP.get());
@@ -30,7 +31,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SHRIMP_SOUP.get());
 
                         output.accept(ModBlocks.TUNGSTEEN_CUBE.get());
-                        output.accept(ModBlocks.FISHSTACK_BLOCK.get());
+                        output.accept(ModBlocks.FISHSTACK_FLUID_BLOCK.get());
+
 
                     }).build());
 
