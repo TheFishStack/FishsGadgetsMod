@@ -12,16 +12,19 @@ import net.minecraft.client.renderer.RenderType;
 
 import net.fishstack.fishsgadgets.entity.ModEntities;
 import net.fishstack.fishsgadgets.entity.client.PhilzLausRenderer;
-import net.fishstack.fishsgadgets.fluids.ModFluidTypes;
-import net.fishstack.fishsgadgets.fluids.ModFluids;
 
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fluids.FluidInteractionRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -57,6 +60,8 @@ public class FishsGadgetsMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        FluidInteractionRegistry.addInteraction(ForgeMod.WATER_TYPE.get(), new FluidInteractionRegistry.InteractionInformation(ModFluidTypes.FISHSTACK_FLUID_TYPE.get(), ModBlocks.FISHSTACK_FLUID_BLOCK.get().defaultBlockState()));
+
 
     }
 
