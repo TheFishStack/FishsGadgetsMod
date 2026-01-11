@@ -2,6 +2,7 @@ package net.fishstack.fishsgadgets.item;
 
 import net.fishstack.fishsgadgets.FishsGadgetsMod;
 import net.fishstack.fishsgadgets.fluid.ModFluids;
+import net.fishstack.fishsgadgets.item.custom.CoolerStaff;
 import net.fishstack.fishsgadgets.item.custom.WandItem;
 import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.BucketItem;
@@ -18,6 +19,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> WAND = ITEMS.register("wand",
             () -> new WandItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> COOLER_STAFF = ITEMS.register("cooler_staff",
+            () -> new CoolerStaff(new Item.Properties().stacksTo(1)));
+
     public static final RegistryObject<Item> FISH_INGOT = ITEMS.register("fish_ingot",
             () -> new Item(new Item.Properties().food(ModFoodProperties.FISH_INGOT)));
     public static final RegistryObject<Item> FISH_PICKAXE = ITEMS.register("fish_pickaxe",

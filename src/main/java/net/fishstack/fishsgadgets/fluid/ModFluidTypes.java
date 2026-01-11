@@ -24,7 +24,6 @@ public class ModFluidTypes {
                     new Vector3f(61f / 255f, 133f / 255f, 198f / 255f),
                     FluidType.Properties.create().lightLevel(2).viscosity(5).density(15)));
 
-
     public static RegistryObject<FluidType> registerFluidType(String name, FluidType fluidType) {
         return FLUID_TYPES.register(name, () -> fluidType);
     }
