@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.fishsgadgetstab"))
                     .displayItems((displayParameters, output) -> {
                         output.accept(ModItems.WAND.get());
+                        output.accept(ModItems.SMOKE_GRENADE.get());
                         output.accept(ModItems.FISH_INGOT.get());
                         output.accept(ModItems.FISH_PICKAXE.get());
                         output.accept(ModItems.BANANENE.get());
