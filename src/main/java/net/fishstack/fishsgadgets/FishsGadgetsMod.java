@@ -2,8 +2,8 @@ package net.fishstack.fishsgadgets;
 
 import com.mojang.logging.LogUtils;
 import net.fishstack.fishsgadgets.block.ModBlocks;
-import net.fishstack.fishsgadgets.fluids.ModFluidTypes;
-import net.fishstack.fishsgadgets.fluids.ModFluids;
+import net.fishstack.fishsgadgets.fluid.ModFluidTypes;
+import net.fishstack.fishsgadgets.fluid.ModFluids;
 import net.fishstack.fishsgadgets.item.ModCreativeModeTabs;
 import net.fishstack.fishsgadgets.item.ModItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -16,7 +16,6 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -36,8 +35,9 @@ public class FishsGadgetsMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModFluids.register(modEventBus);
+
         ModFluidTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

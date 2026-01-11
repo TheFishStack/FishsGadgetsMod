@@ -1,18 +1,14 @@
 package net.fishstack.fishsgadgets.block;
 
 import net.fishstack.fishsgadgets.FishsGadgetsMod;
-import net.fishstack.fishsgadgets.fluids.ModFluids;
+import net.fishstack.fishsgadgets.fluid.ModFluids;
 import net.fishstack.fishsgadgets.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -28,8 +24,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> TUNGSTEEN_CUBE = registerBlock("tungsteen_cube",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
-    public static final RegistryObject<LiquidBlock> FISHSTACK_FLUID_BLOCK = registerBlock("fishstack_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_FISHSTACK_FLUID, BlockBehaviour.Properties.copy(Blocks.WATER)));
+    public static final RegistryObject<LiquidBlock> FISHSTACK_FLUID_BLOCK = BLOCKS.register("fishstack_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_FISHSTACK_FLUID, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

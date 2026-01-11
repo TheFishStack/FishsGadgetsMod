@@ -1,7 +1,7 @@
 package net.fishstack.fishsgadgets.item;
 
 import net.fishstack.fishsgadgets.FishsGadgetsMod;
-import net.fishstack.fishsgadgets.fluids.ModFluids;
+import net.fishstack.fishsgadgets.fluid.ModFluids;
 import net.fishstack.fishsgadgets.item.custom.WandItem;
 import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.BucketItem;
