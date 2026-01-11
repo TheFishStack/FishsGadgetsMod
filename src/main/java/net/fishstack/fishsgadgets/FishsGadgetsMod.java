@@ -2,8 +2,21 @@ package net.fishstack.fishsgadgets;
 
 import com.mojang.logging.LogUtils;
 import net.fishstack.fishsgadgets.block.ModBlocks;
+
 import net.fishstack.fishsgadgets.item.ModCreativeModeTabs;
 import net.fishstack.fishsgadgets.item.ModItems;
+
+import net.fishstack.fishsgadgets.entity.ModEntities;
+import net.fishstack.fishsgadgets.entity.client.PhilzLausRenderer;
+import net.fishstack.fishsgadgets.fluids.ModFluidTypes;
+import net.fishstack.fishsgadgets.fluids.ModFluids;
+import net.fishstack.fishsgadgets.item.ModCreativeModeTabs;
+import net.fishstack.fishsgadgets.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +44,11 @@ public class FishsGadgetsMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+	
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -62,6 +80,9 @@ public class FishsGadgetsMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.PHILZLAUS.get(), PhilzLausRenderer::new);
+         ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_FISHSTACK_FLUID.get(), RenderType.translucent());
+         ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_FISHSTACK_FLUID.get(), RenderType.translucent());
 
         }
     }
